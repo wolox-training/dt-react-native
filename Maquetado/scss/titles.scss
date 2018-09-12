@@ -1,15 +1,16 @@
 $urlImagen: "./assets/triangle.svg";
 
-.titulo {
-
-  .img{
-    background-image: url("./assets/triangle.svg");  
-    height: 80px;
-    width: 50px; 
-  }
+.front-end{
+  background-image: url($urlImagen);
+  background-repeat: no-repeat;
+  margin: 50px 0 0 100px;
+  padding: 45px 62px 65px;
+  position: relative;
 
   .text {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    position: absolute;
   }
 
 }
