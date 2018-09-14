@@ -1,48 +1,49 @@
 $color: #b2db59;
-$urlImagen: "./assets/react_icon.svg";
 
 .tech {
-  border: 1px solid $color;
-  height: 300px;
-  border-radius: 10px;
-  margin:10px;
-  padding: 6px;
-  position: relative;
-  width: 200px;
-}
-
-.content-tech {
   align-items: center;
   background-color: $color;
   border-radius: 10px;
   display: flex;
-  flex-flow: column wrap;
-  height: 300px;
+  flex-direction: column;
   justify-content: space-around;
+  margin: 20px;
+  min-height: 280px;
+  padding: 6px;
+  position: relative;
   width: 200px;
-  background-clip: padding-box;
 
-  .img {
-    background-image: url($urlImagen);
+  &::before {
+    bottom: 10px;
+    border: 1px solid $color;
+    border-radius: 5px;
+    content: '';
+    left: -10px;
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    z-index: -1;
+  }
+
+  .tech-img {
     background-repeat: no-repeat;
     background-size: cover;
     height: 70px;
-    padding: 35px;
     width: 80px;
   }
 
-  .h2 {
+  .tech-title {
     margin-top: -40px;
   }
 
-  .h3 {
+  .tech-release-date {
     font-weight: bold;
     margin-top: -50px;
   }
 
-  .text {
+  .tech-text {
     justify-self: flex-end;
-    font-family: sans-serif, "Times New Roman", Times, serif;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
     text-align: center;
     margin-bottom: 15px;
     margin-top: -40px;
