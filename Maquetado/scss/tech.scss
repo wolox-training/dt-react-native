@@ -4,7 +4,7 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start ;
+  justify-content: flex-start;
   margin: 20px;
   min-height: 280px;
   padding: 6px;
@@ -15,7 +15,7 @@
     bottom: 10px;
     border: 1px solid $colorTech;
     border-radius: 10px;
-    content: '';
+    content: "";
     left: -10px;
     position: absolute;
     right: 10px;
@@ -27,19 +27,22 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 70px;
+    margin-bottom: 20px;
     width: 80px;
   }
 
   .tech-title {
-    margin: 0;
+    margin-bottom: 10px;
   }
 
   .tech-release-date {
     font-weight: bold;
+    margin-bottom: 10px;
   }
 
   .tech-text {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
   }
 }
