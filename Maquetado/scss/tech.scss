@@ -2,7 +2,11 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+<<<<<<< HEAD
   margin: 30px 0 90px 160px;
+=======
+  margin: 30px 0 90px 120px;
+>>>>>>> resolving conflicts after revisions
   width: 1000px;
 }
 
@@ -23,7 +27,7 @@
     bottom: 10px;
     border: 1px solid $green;
     border-radius: 10px;
-    content: "";
+    content: '';
     left: -10px;
     position: absolute;
     right: 10px;
