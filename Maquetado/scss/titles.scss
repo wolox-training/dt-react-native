@@ -1,9 +1,8 @@
-$urlImagen: "./assets/triangle.svg";
+$image-url: "./assets/triangle.svg";
 
 .title-img {
-  background-image: url($urlImagen);
+  background-image: url($image-url);
   background-repeat: no-repeat;
-  font-family: "Open Sans", sans-serif;
   font-size: 25px;
   margin: 20px 0 0 20px;
   padding: 70px 55px 55px 90px;
