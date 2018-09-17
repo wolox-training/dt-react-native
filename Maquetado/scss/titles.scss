@@ -1,7 +1,7 @@
-$urlImagen: './assets/triangle.svg';
+$imagen-url: "./assets/triangle.svg";
 
 .title-img {
-  background-image: url($urlImagen);
+  background-image: url($imagen-url);
   background-repeat: no-repeat;
   font-size: 25px;
   margin: 20px 0 0 20px;
