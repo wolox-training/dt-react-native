@@ -2,8 +2,9 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  margin: 30px 0 90px 120px;
-  width: 1000px;
+  margin: 30px 0 30px 40px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .tech {
