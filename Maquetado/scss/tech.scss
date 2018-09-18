@@ -1,3 +1,18 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tech-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0 120px 120px;
+  width: 100%;
+}
+
 .tech {
   align-items: center;
   background-color: $green;
@@ -24,7 +39,9 @@
   }
 
   .tech-img {
-    margin-bottom: 20px;
+    height: 70px;
+    margin-bottom: 30px;
+    object-fit: contain;
     width: 80px;
   }
 
