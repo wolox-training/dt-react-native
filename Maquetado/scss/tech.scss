@@ -38,6 +38,19 @@
     z-index: -1;
   }
 
+  &:hover::before {
+    bottom: -10px;
+    border: 1px solid $green;
+    border-radius: 10px;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    z-index: -1;
+    transition: all 0.1s ease;
+  }
+
   .tech-img {
     height: 70px;
     margin-bottom: 30px;
