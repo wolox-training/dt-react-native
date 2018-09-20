@@ -1,0 +1,59 @@
+.frontend-grid {
+  display: grid;
+  margin-bottom: 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "react angular vue"
+    "react elm polymer";
+}
+
+.react {
+  grid-area: react;
+}
+
+.angular {
+  grid-area: angular;
+}
+
+.vue {
+  grid-area: vue;
+}
+
+.elm {
+  grid-area: elm;
+}
+
+.polymer {
+  grid-area: polymer;
+}
+
+.backend-grid {
+  display: grid;
+  margin-bottom: 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "ruby express aspnet"
+    "ruby django .";
+}
+
+.ruby {
+  grid-area: ruby;
+}
+
+.express {
+  grid-area: express;
+}
+
+.aspnet {
+  grid-area: aspnet;
+}
+
+.django {
+  grid-area: django;
+}
+
+.primary {
+  border-right: 2px solid $green;
+  justify-content: center;
+  width: auto;
+}
