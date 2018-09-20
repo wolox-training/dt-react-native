@@ -1,0 +1,23 @@
+.header {
+  align-items: center;
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  height: 90px;
+  overflow: hidden;
+  padding: 25px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .header-title {
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .header-logo {
+    object-fit: contain;
+    width: 140px;
+  }
+}
