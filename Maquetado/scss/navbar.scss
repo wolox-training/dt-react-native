@@ -1,6 +1,7 @@
 .header {
   align-items: center;
   background-color: $white;
+  box-shadow: 5px 10px 8px $gray;
   display: flex;
   justify-content: space-between;
   left: 0;
@@ -19,5 +20,13 @@
   .header-logo {
     object-fit: contain;
     width: 140px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    .header-title {
+      display: none;
+    }
   }
 }
