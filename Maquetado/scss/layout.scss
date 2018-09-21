@@ -57,3 +57,38 @@
   justify-content: center;
   width: auto;
 }
+
+@media only screen and (max-width: 1024px) {
+  .frontend-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "react"
+      "angular"
+      "vue"
+      "elm"
+      "polymer";
+  }
+
+  .backend-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "ruby"
+      "express"
+      "aspnet"
+      "django";
+  }
+
+  .primary {
+    border-right: 0;
+  }
+
+  .polymer {
+    border-bottom: 0;
+  }
+
+  .django {
+    border-bottom: 0;
+  }
+}
