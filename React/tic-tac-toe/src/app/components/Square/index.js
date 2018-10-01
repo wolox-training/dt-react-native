@@ -1,14 +1,9 @@
-import React, {Component} from 'react';
-import square from './square.scss';
+import React, { Component } from "react";
+import square from "./square.scss";
 
 class Square extends Component {
-    render() {
-      return (
-        <button className={square.square}>
-          {/* TODO */}
-        </button>
-      );
-    }
+  render() {
+    return <button className={square.square}> {this.props.value}</button>;
   }
-  export default Square;
-  
+}
+export default Square;
