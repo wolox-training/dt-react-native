@@ -3,8 +3,15 @@ import board from "./board.scss";
 import Square from "../Square";
 
 class Board extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      squares: Array(9).fill(null)
+    };
+  }
+
   renderSquare(i) {
-    return <Square value={i} />;
+    return <Square value={this.state.squares[i]} />;
   }
 
   render() {
@@ -28,7 +35,7 @@ class Board extends Component {
           {this.renderSquare(7)}
           {this.renderSquare(8)}
         </div>
-        </React.Fragment>
+      </React.Fragment>
     );
   }
 }
