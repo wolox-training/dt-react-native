@@ -11,7 +11,7 @@ class Board extends Component {
     const status = "Next player: X";
 
     return (
-      <div>
+      <React.Fragment>
         <div className={board.status}>{status}</div>
         <div className={board.boardRow}>
           {this.renderSquare(0)}
@@ -28,7 +28,7 @@ class Board extends Component {
           {this.renderSquare(7)}
           {this.renderSquare(8)}
         </div>
-      </div>
+        </React.Fragment>
     );
   }
 }
