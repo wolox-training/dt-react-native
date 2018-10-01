@@ -5,7 +5,7 @@ import Board from "../Board";
 class Game extends React.Component {
   render() {
     return (
-      <React.Fragment className={game.game}>
+      <div className={game.game}>
         <div className={game.gameBoard}>
           <Board />
         </div>
@@ -13,7 +13,7 @@ class Game extends React.Component {
           <div>{/* status */}</div>
           <ol>{/* TODO */}</ol>
         </div>
-        </React.Fragment>
+        </div>
     );
   }
 }
