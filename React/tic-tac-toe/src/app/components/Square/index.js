@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import square from "./square.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import square from './square.scss';
 
 function Square(props) {
   return (
@@ -8,5 +10,10 @@ function Square(props) {
     </button>
   );
 }
+
+Square.propTypes = {
+  onClick: PropTypes.func,
+  value: PropTypes.number
+};
 
 export default Square;
