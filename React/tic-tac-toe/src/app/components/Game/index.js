@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import Board from '../Board';
+import * as actions from '../../../redux/Game/actions';
 
 import game from './game.scss';
 
@@ -25,43 +28,40 @@ class Game extends Component {
         {
           squares: Array(9).fill(null)
         }
-      ],
-      stepNumber: 0,
-      xIsNext: true
+      ]
     };
   }
 
+  changeStep = (number, bool) => {
+    this.props.dispatch(actions.changeStep(number, bool));
+  };
+
   handleClick = i => {
-    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const history = this.state.history.slice(0, this.props.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    squares[i] = this.props.xIsNext ? 'X' : 'O';
     this.setState({
       history: history.concat([
         {
           squares
         }
-      ]),
-      stepNumber: history.length,
-      xIsNext: !this.state.xIsNext
+      ])
     });
+    this.changeStep(history.length, !this.props.xIsNext);
   };
 
   jumpTo(step) {
-    this.setState({
-      stepNumber: step,
-      xIsNext: step % 2 === 0
-    });
+    this.changeStep(step, step % 2 === 0);
   }
 
   render() {
     const history = this.state.history;
-    const current = history[this.state.stepNumber];
+    const current = history[this.props.stepNumber];
     const winner = calculateWinner(current.squares);
-
     const moves = history.map((step, move) => {
       const desc = move ? `Go to move #${move}` : 'Go to game start';
       /* eslint-disable react/no-array-index-key */
@@ -77,7 +77,7 @@ class Game extends Component {
     if (winner) {
       status = `Winner: ${winner}`;
     } else {
-      status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
+      status = `Next player: ${this.props.xIsNext ? 'X' : 'O'}`;
     }
 
     return (
@@ -94,4 +94,14 @@ class Game extends Component {
   }
 }
 
-export default Game;
+Game.propTypes = {
+  stepNumber: PropTypes.number,
+  xIsNext: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  stepNumber: state.game.stepNumber,
+  xIsNext: state.game.xIsNext
+});
+
+export default connect(mapStateToProps)(Game);

@@ -6,14 +6,6 @@ import Square from '../Square';
 import board from './board.scss';
 
 class Board extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      squares: Array(9).fill(null),
-      xIsNext: true
-    };
-  }
-
   renderSquare(i) {
     return <Square value={this.props.squares[i]} onClick={() => this.props.onClick(i)} />;
   }
@@ -43,7 +35,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-  squares: PropTypes.element.isRequired,
+  squares: PropTypes.instanceOf(Array),
   onClick: PropTypes.func
 };
 
