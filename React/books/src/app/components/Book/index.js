@@ -13,25 +13,35 @@ class Book extends Component {
     this.props.dispatch(actionsCreators.getBooks());
   };
 
-  getUlListBooks = () => {
+  renderBooks = () => {
     if (this.props.listBooks) {
       return this.props.listBooks.map(book => <li key={book.id}>{`${book.title} ${book.author}`}</li>);
     }
   };
 
-  getStateBooks() {
-    if (this.props.loading) {
+  renderStateRequest() {
+    if (this.props.loading && !this.props.failure) {
       return 'Cargando...';
+    } else if (this.props.loading && this.props.failure) {
+      return 'Error al cargar libros';
     }
     return 'Books:';
+  }
+  renderSequest() {
+    if (this.props.loading && !this.props.failure) {
+      return false;
+    } else if (this.props.loading && this.props.failure) {
+      return true;
+    }
+    return true;
   }
 
   render() {
     return (
       <div>
-        <h2>{this.getStateBooks()}</h2>
-        <ul>{this.getUlListBooks()}</ul>
-        <button onClick={this.getBooks} disabled={this.props.loading}>
+        <h2>{this.renderStateRequest()}</h2>
+        <ul>{this.renderBooks()}</ul>
+        <button onClick={this.getBooks} disabled={this.props.loading && !this.props.failure}>
           RECARGAR
         </button>
       </div>
@@ -41,12 +51,14 @@ class Book extends Component {
 
 Book.propTypes = {
   loading: PropTypes.bool,
-  listBooks: PropTypes.arrayOf(Element)
+  listBooks: PropTypes.arrayOf(Element),
+  failure: PropTypes.bool
 };
 
 const mapStateToProps = state => ({
   loading: state.book.loading,
-  listBooks: state.book.listBooks
+  listBooks: state.book.listBooks,
+  failure: state.book.failure
 });
 
 export default connect(mapStateToProps)(Book);

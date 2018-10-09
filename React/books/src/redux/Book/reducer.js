@@ -2,7 +2,8 @@ import { GET_BOOKS_FAILURE, GET_BOOKS_SUCCESS } from './actions';
 
 const initialState = {
   loading: true,
-  listBooks: []
+  listBooks: [],
+  failure: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -10,12 +11,14 @@ const reducer = (state = initialState, action) => {
     case GET_BOOKS_SUCCESS:
       return Object.assign({}, state, {
         loading: false,
-        listBooks: action.payload
+        listBooks: action.payload,
+        failure: false
       });
     case GET_BOOKS_FAILURE:
       return Object.assign({}, state, {
         loading: true,
-        listBooks: []
+        listBooks: [],
+        failure: true
       });
     default:
       return state;
