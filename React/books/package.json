@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/redux-actions": "^2.3.0",
+    "ajv": "^6.5.4",
     "apisauce": "^0.16.0",
     "dotenv": "^6.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-action-creator": "^3.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "wolox-react-scripts": "1.2.1"
   },
   "scripts": {
