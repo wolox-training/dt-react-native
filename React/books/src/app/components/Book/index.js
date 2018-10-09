@@ -20,20 +20,13 @@ class Book extends Component {
   };
 
   renderStateRequest() {
-    if (this.props.loading && !this.props.failure) {
+    if (this.props.loading) {
       return 'Cargando...';
-    } else if (this.props.loading && this.props.failure) {
+    }
+    if (this.props.failure) {
       return 'Error al cargar libros';
     }
     return 'Books:';
-  }
-  renderSequest() {
-    if (this.props.loading && !this.props.failure) {
-      return false;
-    } else if (this.props.loading && this.props.failure) {
-      return true;
-    }
-    return true;
   }
 
   render() {
