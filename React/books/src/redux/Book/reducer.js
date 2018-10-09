@@ -1,18 +1,21 @@
 import { GET_BOOKS_FAILURE, GET_BOOKS_SUCCESS } from './actions';
 
 const initialState = {
-  text: 'Cargando...'
+  loading: true,
+  listBooks: []
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_BOOKS_SUCCESS:
       return Object.assign({}, state, {
-        text: JSON.stringify(action.payload)
+        loading: false,
+        listBooks: action.payload
       });
     case GET_BOOKS_FAILURE:
       return Object.assign({}, state, {
-        text: JSON.stringify(action.payload)
+        loading: true,
+        listBooks: []
       });
     default:
       return state;
