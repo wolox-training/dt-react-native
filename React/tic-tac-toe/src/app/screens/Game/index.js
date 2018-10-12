@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Board from '../Board';
 import * as actions from '../../../redux/Game/actions';
 
+import Board from './components/Board';
 import game from './game.scss';
 
 function calculateWinner(squares) {
