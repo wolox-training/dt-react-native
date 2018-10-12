@@ -27,26 +27,23 @@ class LoginPage extends Component {
 
   submit = values => {
     this.props.dispatch(actionsCreators.login(values.email, values.pass));
-    if (this.props.logged) {
-      this.routeGame();
-    } else {
-      /* eslint-disable */
-      window.alert(
-        JSON.stringify(`El email: ${values.email} y/o contrasena: ${values.pass} no coinciden`, null, 4)
-      );
-      /* eslint-enable */
-    }
   };
   render() {
     if (this.props.logged) {
       return this.routeGame();
     }
-    return <Form onSubmit={this.submit} />;
+    return (
+      <div>
+        <Form onSubmit={this.submit} />
+        {this.props.failure && <span> No coincide el email y contraseña </span>}
+      </div>
+    );
   }
 }
 
 LoginPage.propTypes = {
-  logged: PropTypes.bool
+  logged: PropTypes.bool,
+  failure: PropTypes.bool
 };
 
 const stateToProps = state => ({
