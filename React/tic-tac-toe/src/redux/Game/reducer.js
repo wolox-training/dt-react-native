@@ -10,10 +10,8 @@ const reducerGame = (state = initialState, action) => {
     case types.CHANGE_STEP:
       return {
         ...state,
-        ...{
-          stepNumber: action.number,
-          xIsNext: action.bool
-        }
+        stepNumber: action.number,
+        xIsNext: action.bool
       };
     default:
       return state;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import PropTypes from 'prop-types';
 
 import CustomInput from '../../components/Input';
 
@@ -7,9 +8,7 @@ import { validate } from './validation';
 
 class Form extends Component {
   render() {
-    /* eslint-disable react/prop-types */
     const { handleSubmit } = this.props;
-    /* eslint-enable react/prop-types */
     return (
       <form onSubmit={handleSubmit}>
         <Field name="email" component={CustomInput} type="text" label="Email: " />
@@ -19,6 +18,10 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  handleSubmit: PropTypes.func.isRequired
+};
 
 export default reduxForm({
   form: 'login',
