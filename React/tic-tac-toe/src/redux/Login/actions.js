@@ -21,7 +21,7 @@ const actionCreators = {
       });
     }
   },
-  logeed: () => ({ type: SET_LOGIN_SUCCESS })
+  logged: () => ({ type: SET_LOGIN_SUCCESS })
 };
 
 export default actionCreators;

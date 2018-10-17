@@ -1,8 +1,8 @@
 export const validate = values => {
   const errors = {};
-/* eslint-disable */
+  /* eslint-disable no-useless-escape */
   const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  /* eslint-enable */
+  /* eslint-enable no-useless-escape */
   if (!values.email) {
     errors.email = 'Email is required';
   }

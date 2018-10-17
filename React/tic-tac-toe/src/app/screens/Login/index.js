@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-/* import { Link } from 'react-router-dom'; */
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
@@ -12,7 +11,7 @@ import Form from './layout';
 class LoginPage extends Component {
   componentDidMount = () => {
     if (localStorage.getItem('token')) {
-      this.props.dispatch(actionsCreators.logeed());
+      this.props.dispatch(actionsCreators.logged());
     }
   };
 
