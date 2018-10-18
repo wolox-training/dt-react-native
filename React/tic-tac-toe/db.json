@@ -1,0 +1,8 @@
+{
+    "users": [
+      { "id": 1, "email": "david.tito@wolox.com.ar", "password": "12345678" },
+      { "id": 2, "email": "alan@wolox.com.ar", "password": "1234" },
+      { "id": 3, "email": "agus@wolox.com.ar", "password": "12345678" },
+      { "id": 4, "email": "german@wolox.com.ar", "password": "1234" }
+    ]
+}

@@ -1,17 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import Game from 'app/components/Game/index';
 
-import './scss/index.scss';
-import store from './redux/store';
+import App from '../src/app/components/App';
+
 import registerServiceWorker from './registerServiceWorker';
 
-const MiApp = () => (
-  <Provider store={store}>
-    <Game />
-  </Provider>
-);
-
-ReactDOM.render(<MiApp />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
