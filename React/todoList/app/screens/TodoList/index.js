@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import Title from '../Title/index';
-import Input from "../Input/index";
-import Footer from "../Footer/index";
-import List from "../List/index";
+import Title from '../../components/Title';
+import Input from "../../components/Input";
+import Footer from "../../components/Footer";
+import List from "../../components/List";
 
 const styles = StyleSheet.create({
   container: {
@@ -21,7 +21,7 @@ class App extends Component {
  
     return (
       <View style={styles.container}>
-        <Title>Todo List</Title>
+        <Title>TodoList</Title>
         <Input/>
         <View style={styles.divider} />
         <List/>      

@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   header: {
     backgroundColor: 'skyblue',
-    padding: 60,
+    padding: 15,
   },
   title: {
     textAlign: 'center',
