@@ -3,8 +3,7 @@ import { Text, Image, FlatList, View, Alert } from "react-native";
 import Books from "../../../books";
 import { ListItem } from "react-native-elements";
 
-const defaultImage =
-  "https://acompli.helpshift.com/static/images/avatars/default-app-icon.png";
+const defaultImage = "https://acompli.helpshift.com/static/images/avatars/default-app-icon.png";
 
 class BookScreen extends Component {
   _keyExtractor = (book, index) => `${book.id}`;
