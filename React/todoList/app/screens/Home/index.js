@@ -7,25 +7,24 @@ import {
   createStackNavigator
 } from "react-navigation";
 
-const BookDetailStack = createStackNavigator({
+const BooksStack = createStackNavigator({
   Books: BookScreen,
-  BookDetail: BookDetailScreen,
+  BookDetail: BookDetailScreen
 });
 
-const TabNavigator = createMaterialTopTabNavigator({
-  TodoList: AppTodoList,
-  Books: BookDetailStack,
-}, {
-  tabBarPosition: 'top',
-});
-
+const TabNavigator = createMaterialTopTabNavigator(
+  {
+    TodoList: AppTodoList,
+    Books: BooksStack
+  },
+  {
+    tabBarPosition: "top"
+  }
+);
 
 const AppNavigator = createStackNavigator(
   {
     Home: TabNavigator
-  },
-  {
-    initialRouteName: 'Home',
   },
   {
     navigationOptions: {

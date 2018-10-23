@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, Image, FlatList, View, Alert } from "react-native";
+import { Text, FlatList } from "react-native";
 import Books from "../../../books";
 import { ListItem } from "react-native-elements";
 
