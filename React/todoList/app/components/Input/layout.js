@@ -1,16 +1,9 @@
 import React, { Component } from "react";
-import { TextInput, StyleSheet } from "react-native";
+import { TextInput } from "react-native";
 import PropTypes from "prop-types";
+import styles from './styles';
 
-
-const styles = StyleSheet.create({
-    input: {
-      height: 50,
-      padding: 15
-    }
-  });
-
-  class Input extends Component{
+ class Input extends Component{
 
     render() {
         const { placeholder, onSubmitEditing, onChangeText, text} = this.props;

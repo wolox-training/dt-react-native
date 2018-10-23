@@ -4,16 +4,7 @@ import Title from '../../components/Title';
 import Input from "../../components/Input";
 import Footer from "../../components/Footer";
 import List from "../../components/List";
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  divider: {
-    height: 1,
-    backgroundColor: "whitesmoke"
-  }
-});
+import styles from './styles';
 
 class App extends Component {
 

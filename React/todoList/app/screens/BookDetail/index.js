@@ -1,16 +1,8 @@
 import React, { Component } from "react";
-import { View, StyleSheet,Text } from "react-native";
+import { View,Text } from "react-native";
 import Title from '../../components/Title';
+import styles from './styles';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  divider: {
-    height: 1,
-    backgroundColor: "whitesmoke"
-  }
-})
 
 class BookDetail extends Component {
     render() {

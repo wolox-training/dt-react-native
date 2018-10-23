@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Text, Image, FlatList, View, Alert } from "react-native";
 import Books from "../../../books";
 import { ListItem } from "react-native-elements";
-import { createStackNavigator } from "react-navigation";
-//const ds = new FlatList.Data({ rowHasChanged: (r1, r2) => r1 != r2 });
+
 const defaultImage =
   "https://acompli.helpshift.com/static/images/avatars/default-app-icon.png";
 
@@ -15,15 +14,11 @@ class BookScreen extends Component {
     loaded: false
   };
 
-  navigate(url){
-  
-  }
-
-  renderbookRow = ({ item: book }) =>{
+  renderbookRow = ({ item: book }) => {
     return (
       <ListItem
         onPress={() => {
-          this.props.navigation.navigate("BookDetail",{
+          this.props.navigation.navigate("BookDetail", {
             book: book
           });
         }}
